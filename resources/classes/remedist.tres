@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=10 format=3 uid="uid://mdq8fc6cgdyc"]
+
+[ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_gitav"]
+[ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_altiu"]
+[ext_resource type="Script" uid="uid://cmojdfshlvtem" path="res://resources/equipment/item_choices.gd" id="3_2ncqe"]
+[ext_resource type="Script" uid="uid://cpbg0wlw4agyp" path="res://resources/stats.gd" id="3_altiu"]
+
+[sub_resource type="Resource" id="Resource_2ncqe"]
+script = ExtResource("2_altiu")
+selection_rarity = 0
+name = "Bandage"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_cqqtx"]
+script = ExtResource("3_2ncqe")
+choices = Array[ExtResource("2_altiu")]([SubResource("Resource_2ncqe")])
+probability = 100
+metadata/_custom_type_script = "uid://cmojdfshlvtem"
+
+[sub_resource type="Resource" id="Resource_51gpb"]
+script = ExtResource("2_altiu")
+selection_rarity = 0
+name = "Bandage"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_ghggi"]
+script = ExtResource("3_2ncqe")
+choices = Array[ExtResource("2_altiu")]([SubResource("Resource_51gpb")])
+probability = 50
+metadata/_custom_type_script = "uid://cmojdfshlvtem"
+
+[sub_resource type="Resource" id="Resource_avgwu"]
+script = ExtResource("3_altiu")
+hp = 10
+strn = 0
+wis = 0
+metadata/_custom_type_script = "uid://cpbg0wlw4agyp"
+
+[resource]
+script = ExtResource("1_gitav")
+rarity = 0
+selection_rarity = 0
+role = 1
+priority = 0
+stats = SubResource("Resource_avgwu")
+starting_weapons = Array[ExtResource("2_altiu")]([])
+starting_armor = Array[ExtResource("2_altiu")]([])
+starting_items = Array[ExtResource("3_2ncqe")]([SubResource("Resource_cqqtx"), SubResource("Resource_ghggi")])
+magic_schools = Array[int]([])
+metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"

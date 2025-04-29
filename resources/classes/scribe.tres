@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=8 format=3 uid="uid://dooak3tvnhx0"]
+
+[ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_bu746"]
+[ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_pk1w0"]
+[ext_resource type="Script" uid="uid://cmojdfshlvtem" path="res://resources/equipment/item_choices.gd" id="3_disfy"]
+[ext_resource type="Script" uid="uid://cpbg0wlw4agyp" path="res://resources/stats.gd" id="3_pk1w0"]
+
+[sub_resource type="Resource" id="Resource_tgjgc"]
+script = ExtResource("2_pk1w0")
+selection_rarity = 0
+name = "Quill"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_rl0cw"]
+script = ExtResource("3_disfy")
+choices = Array[ExtResource("2_pk1w0")]([SubResource("Resource_tgjgc")])
+probability = 100
+metadata/_custom_type_script = "uid://cmojdfshlvtem"
+
+[sub_resource type="Resource" id="Resource_disfy"]
+script = ExtResource("3_pk1w0")
+hp = 10
+strn = 0
+wis = 0
+metadata/_custom_type_script = "uid://cpbg0wlw4agyp"
+
+[resource]
+script = ExtResource("1_bu746")
+rarity = 0
+selection_rarity = 0
+role = 2
+priority = 100
+stats = SubResource("Resource_disfy")
+starting_weapons = Array[ExtResource("2_pk1w0")]([])
+starting_armor = Array[ExtResource("2_pk1w0")]([])
+starting_items = Array[ExtResource("3_disfy")]([SubResource("Resource_rl0cw")])
+magic_schools = Array[int]([])
+metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"

@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=8 format=3 uid="uid://bwtsf2f1kxtgo"]
+
+[ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_m3vo6"]
+[ext_resource type="Script" uid="uid://cpbg0wlw4agyp" path="res://resources/stats.gd" id="2_6fwkn"]
+[ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_6i3u7"]
+[ext_resource type="Script" uid="uid://cmojdfshlvtem" path="res://resources/equipment/item_choices.gd" id="3_xwsub"]
+
+[sub_resource type="Resource" id="Resource_xwsub"]
+script = ExtResource("2_6i3u7")
+selection_rarity = 0
+name = "Cane"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_kafv0"]
+script = ExtResource("2_6i3u7")
+selection_rarity = 0
+name = "Dagger"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_6i3u7"]
+script = ExtResource("2_6fwkn")
+hp = 15
+strn = 0
+wis = 0
+metadata/_custom_type_script = "uid://cpbg0wlw4agyp"
+
+[resource]
+script = ExtResource("1_m3vo6")
+rarity = 0
+selection_rarity = 0
+role = 0
+priority = 20
+stats = SubResource("Resource_6i3u7")
+starting_weapons = Array[ExtResource("2_6i3u7")]([SubResource("Resource_xwsub"), SubResource("Resource_kafv0")])
+starting_armor = Array[ExtResource("2_6i3u7")]([])
+starting_items = Array[ExtResource("3_xwsub")]([])
+magic_schools = Array[int]([1])
+metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"

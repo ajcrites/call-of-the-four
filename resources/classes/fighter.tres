@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=9 format=3 uid="uid://cu6a486gh4v8m"]
+
+[ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_k2608"]
+[ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_dxal0"]
+[ext_resource type="Script" uid="uid://cpbg0wlw4agyp" path="res://resources/stats.gd" id="2_e580d"]
+[ext_resource type="Script" uid="uid://cmojdfshlvtem" path="res://resources/equipment/item_choices.gd" id="3_wyec1"]
+
+[sub_resource type="Resource" id="Resource_wyec1"]
+script = ExtResource("2_dxal0")
+selection_rarity = 0
+name = "Chain Mail"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_w7gdv"]
+script = ExtResource("2_dxal0")
+selection_rarity = 0
+name = "Epee"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_78nq7"]
+script = ExtResource("2_dxal0")
+selection_rarity = 0
+name = "Short Sword"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_dxal0"]
+script = ExtResource("2_e580d")
+hp = 30
+strn = 0
+wis = 0
+metadata/_custom_type_script = "uid://cpbg0wlw4agyp"
+
+[resource]
+script = ExtResource("1_k2608")
+rarity = 0
+selection_rarity = 0
+role = null
+priority = null
+stats = SubResource("Resource_dxal0")
+starting_weapons = Array[ExtResource("2_dxal0")]([SubResource("Resource_w7gdv"), SubResource("Resource_78nq7")])
+starting_armor = Array[ExtResource("2_dxal0")]([SubResource("Resource_wyec1")])
+starting_items = Array[ExtResource("3_wyec1")]([])
+magic_schools = Array[int]([])
+metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"

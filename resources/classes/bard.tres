@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=6 format=3 uid="uid://dcawbcqxcpc0x"]
+
+[ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_rrbmb"]
+[ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_7wg81"]
+[ext_resource type="Script" uid="uid://cpbg0wlw4agyp" path="res://resources/stats.gd" id="2_kdroc"]
+[ext_resource type="Script" uid="uid://cmojdfshlvtem" path="res://resources/equipment/item_choices.gd" id="3_e4y3l"]
+
+[sub_resource type="Resource" id="Resource_7wg81"]
+script = ExtResource("2_kdroc")
+hp = 14
+strn = 0
+wis = 0
+metadata/_custom_type_script = "uid://cpbg0wlw4agyp"
+
+[resource]
+script = ExtResource("1_rrbmb")
+rarity = 1
+selection_rarity = 1
+role = 1
+priority = 20
+stats = SubResource("Resource_7wg81")
+starting_weapons = null
+starting_armor = Array[ExtResource("2_7wg81")]([])
+starting_items = Array[ExtResource("3_e4y3l")]([])
+magic_schools = Array[int]([])
+metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"

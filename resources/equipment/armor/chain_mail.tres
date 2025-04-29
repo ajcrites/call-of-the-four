@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://cpqan41bgb6bd"]
+
+[ext_resource type="Script" uid="uid://d0dk21khi1l8y" path="res://resources/equipment/armor/armor.gd" id="1_r38jy"]
+
+[resource]
+script = ExtResource("1_r38jy")
+rarity = 0
+absorb = 4
+metadata/_custom_type_script = "uid://d0dk21khi1l8y"

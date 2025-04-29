@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://cuinwgjlo6f3y"]
+
+[ext_resource type="Script" uid="uid://dgx8o5i52a5nx" path="res://resources/equipment/weapons/weapon.gd" id="1_8e1gm"]
+
+[resource]
+script = ExtResource("1_8e1gm")
+rarity = 0
+power = 4
+metadata/_custom_type_script = "uid://dgx8o5i52a5nx"

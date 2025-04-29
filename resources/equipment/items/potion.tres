@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://qipofnafygf3"]
+
+[ext_resource type="Script" uid="uid://b054gy6jaaywk" path="res://resources/equipment/items/item.gd" id="1_kep2f"]
+
+[resource]
+script = ExtResource("1_kep2f")
+rarity = 0
+charges = 1
+metadata/_custom_type_script = "uid://b054gy6jaaywk"

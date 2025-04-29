@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=11 format=3 uid="uid://bm3ripgvxcfne"]
+
+[ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_6n8b5"]
+[ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_yusc4"]
+[ext_resource type="Script" uid="uid://cmojdfshlvtem" path="res://resources/equipment/item_choices.gd" id="3_cjjkc"]
+[ext_resource type="Script" uid="uid://cpbg0wlw4agyp" path="res://resources/stats.gd" id="4_yusc4"]
+
+[sub_resource type="Resource" id="Resource_cjjkc"]
+script = ExtResource("2_yusc4")
+selection_rarity = 0
+name = "Potion"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_7vq8t"]
+script = ExtResource("3_cjjkc")
+choices = Array[ExtResource("2_yusc4")]([SubResource("Resource_cjjkc")])
+probability = 100
+metadata/_custom_type_script = "uid://cmojdfshlvtem"
+
+[sub_resource type="Resource" id="Resource_yusc4"]
+script = ExtResource("2_yusc4")
+selection_rarity = 0
+name = "Potion"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_4hlcn"]
+script = ExtResource("2_yusc4")
+selection_rarity = 1
+name = "Newt"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_43wjb"]
+script = ExtResource("3_cjjkc")
+choices = Array[ExtResource("2_yusc4")]([SubResource("Resource_yusc4"), SubResource("Resource_4hlcn")])
+probability = 100
+metadata/_custom_type_script = "uid://cmojdfshlvtem"
+
+[sub_resource type="Resource" id="Resource_obehw"]
+script = ExtResource("4_yusc4")
+hp = 16
+strn = 0
+wis = 0
+metadata/_custom_type_script = "uid://cpbg0wlw4agyp"
+
+[resource]
+script = ExtResource("1_6n8b5")
+rarity = 1
+selection_rarity = 1
+role = 0
+priority = 0
+stats = SubResource("Resource_obehw")
+starting_weapons = Array[ExtResource("2_yusc4")]([])
+starting_armor = Array[ExtResource("2_yusc4")]([])
+starting_items = Array[ExtResource("3_cjjkc")]([SubResource("Resource_7vq8t"), SubResource("Resource_43wjb")])
+magic_schools = Array[int]([])
+metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"
