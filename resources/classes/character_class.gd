@@ -10,3 +10,5 @@ class_name CharacterClass
 @export var starting_armor: Array[LoadoutChoice]
 @export var starting_items: Array[ItemChoices]
 @export var magic_schools: Array[MagicClassifications.School]
+@export var weapon_types: Array[WeaponCategories.WeaponType]
+@export var armor_types: Array[ArmorCategories.ArmorType]

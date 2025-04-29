@@ -35,4 +35,5 @@ starting_weapons = Array[ExtResource("2_6i3u7")]([SubResource("Resource_xwsub"),
 starting_armor = Array[ExtResource("2_6i3u7")]([])
 starting_items = Array[ExtResource("3_xwsub")]([])
 magic_schools = Array[int]([1])
+weapon_types = Array[int]([2, 3])
 metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"

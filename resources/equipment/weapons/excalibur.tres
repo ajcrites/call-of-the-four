@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://5jv3jvl8qe4f"]
+
+[ext_resource type="Script" uid="uid://dgx8o5i52a5nx" path="res://resources/equipment/weapons/weapon.gd" id="1_s8qj7"]
+
+[resource]
+script = ExtResource("1_s8qj7")
+rarity = 2
+power = 0
+type = 0
+holders = Array[String](["Knight"])
+metadata/_custom_type_script = "uid://dgx8o5i52a5nx"

@@ -6,4 +6,6 @@
 script = ExtResource("1_7rlua")
 rarity = 0
 power = 1
+type = 3
+holders = Array[String]([])
 metadata/_custom_type_script = "uid://dgx8o5i52a5nx"

@@ -6,4 +6,6 @@
 script = ExtResource("1_gaii3")
 rarity = 2
 power = 5
+type = 3
+holders = Array[String](["Flame Mage"])
 metadata/_custom_type_script = "uid://dgx8o5i52a5nx"

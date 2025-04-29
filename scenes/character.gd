@@ -6,14 +6,8 @@ var character_name: String
 var _class: CharacterClass
 var stats: Stats
 var level: int = 1
-var experience: int = 0
+var hp: int = 0
 
-# Stats
-var max_hp: int
-var current_hp: int
-var strength: int
-var agility: int
-var intelligence: int
 var weapon: Weapon
 var armor: Armor
 var items: Array[Item] = []
@@ -23,8 +17,10 @@ var is_active: bool = false
 var position_in_party: int
 
 func _init(set_class: CharacterClass):
+	character_name = Util.get_random_name()
 	_class = set_class
 	stats = set_class.stats
+	hp = stats.hp
 	
 	var gear_rarity_thresholds = {
 		Rarity.RarityType.UNCOMMON: 25,
@@ -39,12 +35,12 @@ func _init(set_class: CharacterClass):
 	if starting_weapon:
 		weapon = LoadoutManager.equipment.weapons[starting_weapon.name]
 	
-	var starting_armor =  Util.get_choice_by_rarity(
+	var starting_armor = Util.get_choice_by_rarity(
 		set_class.starting_armor,
 		gear_rarity_thresholds,
 	)
 	
-	if starting_armor:
+	if starting_armor && starting_armor.name:
 		armor = LoadoutManager.equipment.armor[starting_armor.name]
 
 	for item_choices in set_class.starting_items:
@@ -59,14 +55,6 @@ func _init(set_class: CharacterClass):
 				if chosen_item:
 					starting_item = LoadoutManager.equipment.items[chosen_item.name]
 		items.append(starting_item)
-
-func take_damage(amount: int) -> void:
-	current_hp = max(0, current_hp - amount)
-	if current_hp <= 0:
-		die()
-
-func heal(amount: int) -> void:
-	current_hp = min(max_hp, current_hp + amount)
 
 func die() -> void:
 	# Handle character death

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://djlgtrmge1na7"]
+
+[ext_resource type="Script" uid="uid://d0dk21khi1l8y" path="res://resources/equipment/armor/armor.gd" id="1_hm25k"]
+
+[resource]
+script = ExtResource("1_hm25k")
+rarity = 0
+absorb = 2
+type = 0
+wearers = Array[String]([])
+metadata/_custom_type_script = "uid://d0dk21khi1l8y"

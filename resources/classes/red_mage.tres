@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterClass" load_steps=8 format=3 uid="uid://ckxtepotgupgh"]
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=10 format=3 uid="uid://ckxtepotgupgh"]
 
 [ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_oxbag"]
 [ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_w8t4a"]
@@ -9,6 +9,18 @@
 script = ExtResource("2_w8t4a")
 selection_rarity = 0
 name = "Chain Mail"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_x2jg4"]
+script = ExtResource("2_w8t4a")
+selection_rarity = 0
+name = "Leather"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_ky8el"]
+script = ExtResource("2_w8t4a")
+selection_rarity = 0
+name = ""
 metadata/_custom_type_script = "uid://djl6x38kwv8fl"
 
 [sub_resource type="Resource" id="Resource_i3ons"]
@@ -32,7 +44,9 @@ role = 0
 priority = 10
 stats = SubResource("Resource_iwdne")
 starting_weapons = Array[ExtResource("2_w8t4a")]([SubResource("Resource_i3ons")])
-starting_armor = Array[ExtResource("2_w8t4a")]([SubResource("Resource_r62r3")])
+starting_armor = Array[ExtResource("2_w8t4a")]([SubResource("Resource_r62r3"), SubResource("Resource_x2jg4"), SubResource("Resource_ky8el")])
 starting_items = Array[ExtResource("3_r62r3")]([])
 magic_schools = Array[int]([0, 1])
+weapon_types = Array[int]([0, 2, 3])
+armor_types = Array[int]([0, 1])
 metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"

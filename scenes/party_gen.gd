@@ -90,22 +90,28 @@ func create_character_display(character) -> Control:
 	char_content.set_anchors_preset(Control.PRESET_FULL_RECT)
 	panel.add_child(char_content)
 	
+	var name_label = Label.new()
+	name_label.add_theme_font_size_override("font_size", 36)
+	name_label.text = character.character_name
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	char_content.add_child(name_label)
+	
 	var class_label = Label.new()
-	class_label.add_theme_font_size_override("font_size", 36)
+	class_label.add_theme_font_size_override("font_size", 30)
 	class_label.text = character._class.get_resource_name()
 	class_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	char_content.add_child(class_label)
 	
 	if character.weapon:
 		var weapon_label = Label.new()
-		weapon_label.add_theme_font_size_override("font_size", 24)
+		weapon_label.add_theme_font_size_override("font_size", 20)
 		weapon_label.text = character.weapon.get_resource_name()
 		weapon_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		char_content.add_child(weapon_label)
 		
 	if character.armor:
 		var armor_label = Label.new()
-		armor_label.add_theme_font_size_override("font_size", 24)
+		armor_label.add_theme_font_size_override("font_size", 20)
 		armor_label.text = character.armor.get_resource_name()
 		armor_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		char_content.add_child(armor_label)
@@ -113,7 +119,7 @@ func create_character_display(character) -> Control:
 	if character.items:
 		for item in character.items:
 			var item_label = Label.new()
-			item_label.add_theme_font_size_override("font_size", 24)
+			item_label.add_theme_font_size_override("font_size", 20)
 			if item:
 				item_label.text = item.get_resource_name()
 			else:

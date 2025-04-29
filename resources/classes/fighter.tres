@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterClass" load_steps=9 format=3 uid="uid://cu6a486gh4v8m"]
+[gd_resource type="Resource" script_class="CharacterClass" load_steps=11 format=3 uid="uid://cu6a486gh4v8m"]
 
 [ext_resource type="Script" uid="uid://b0w4cqwu5rnyd" path="res://resources/classes/character_class.gd" id="1_k2608"]
 [ext_resource type="Script" uid="uid://djl6x38kwv8fl" path="res://resources/equipment/loadout_choice.gd" id="2_dxal0"]
@@ -9,6 +9,12 @@
 script = ExtResource("2_dxal0")
 selection_rarity = 0
 name = "Chain Mail"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
+[sub_resource type="Resource" id="Resource_jpfsj"]
+script = ExtResource("2_dxal0")
+selection_rarity = 0
+name = "Leather"
 metadata/_custom_type_script = "uid://djl6x38kwv8fl"
 
 [sub_resource type="Resource" id="Resource_w7gdv"]
@@ -23,6 +29,12 @@ selection_rarity = 0
 name = "Short Sword"
 metadata/_custom_type_script = "uid://djl6x38kwv8fl"
 
+[sub_resource type="Resource" id="Resource_0skpw"]
+script = ExtResource("2_dxal0")
+selection_rarity = 1
+name = "Long Sword"
+metadata/_custom_type_script = "uid://djl6x38kwv8fl"
+
 [sub_resource type="Resource" id="Resource_dxal0"]
 script = ExtResource("2_e580d")
 hp = 30
@@ -34,11 +46,13 @@ metadata/_custom_type_script = "uid://cpbg0wlw4agyp"
 script = ExtResource("1_k2608")
 rarity = 0
 selection_rarity = 0
-role = null
-priority = null
+role = 0
+priority = 0
 stats = SubResource("Resource_dxal0")
-starting_weapons = Array[ExtResource("2_dxal0")]([SubResource("Resource_w7gdv"), SubResource("Resource_78nq7")])
-starting_armor = Array[ExtResource("2_dxal0")]([SubResource("Resource_wyec1")])
+starting_weapons = Array[ExtResource("2_dxal0")]([SubResource("Resource_w7gdv"), SubResource("Resource_78nq7"), SubResource("Resource_0skpw")])
+starting_armor = Array[ExtResource("2_dxal0")]([SubResource("Resource_wyec1"), SubResource("Resource_jpfsj")])
 starting_items = Array[ExtResource("3_wyec1")]([])
 magic_schools = Array[int]([])
+weapon_types = Array[int]([0, 1, 2, 5, 6])
+armor_types = Array[int]([0, 1])
 metadata/_custom_type_script = "uid://b0w4cqwu5rnyd"
